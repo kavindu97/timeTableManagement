@@ -1,0 +1,102 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 14px;
+    cursor: pointer;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button5 {border-radius: 50%;}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+  .button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#services .add_student_box {
+    padding: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
+    background: #fff;
+    transition: 0.4s;
+}
+  
+#services .add_student_box .icon {
+    float: left;
+}
+  
+#services .add_student_box .icon i {
+    color: #444;
+    font-size: 64px;
+    transition: 0.5s;
+    line-height: 0;
+    margin-top: 34px;
+}
+  
+#services .add_student_box .icon i:before {
+    background: #0c2e8a;
+    background: linear-gradient(45deg, #50d8af 0%, #a3ebd5 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+#services .add_student_box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+  
+#services .add_student_box h4 a {
+    color: #444;
+}
+  
+#services .add_student_box p {
+    font-size: 14px;
+    margin-left: 100px;
+    margin-bottom: 0;
+    line-height: 24px;
+}
+
+.add_tag_submit_btn {
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.student_filed {
+    margin-top: 15px;
+}
+
+.student_btn_section {
+    padding-left: 180px;
+}

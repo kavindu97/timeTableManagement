@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Institution</title>
+  <link rel="stylesheet" href="./../bootstrap.min.css">
+  <link rel="stylesheet" href="./../css/buildingLocation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+  <script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("bName");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+
+<style>
+    .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+    }
+    
+    .pagination a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+    
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+    </style>
+    
+</head>
+<body>
+<br/>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="./../index.html">Home</a></li>
+    <li class="breadcrumb-item active">Location</li>
+  </ol>
+ <h4 style="text-align: center;">Building Location Info</h4>
+ <button class="btn btn-success" onclick="document.location='./../index.html'" style="margin-left:0.5em;">BACK TO HOME</button>
+ <button class="btn btn-warning" style="margin-left:83em;" onclick="document.location='addRoom.html'">ADD ROOMS</button>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 p-4 my-auto">
+        <!-- Product Form -->
+        <form id="buildingForm" class="card card-body">
+        <div class="card-header">Building</div>
+         <hr class="cell-divide-hr">
+          <div class="form-group">
+            <input type="text" id="bName" placeholder="Building Name" class="form-control" autofocus required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="bBlock" placeholder="Block" step="any" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <textarea id="bDes" rows="3" placeholder="Building Description" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Save
+          </button>
+        </form>
+        
+      </div>
+      
+         <!-- Product List -->
+      <div class="col-md-6">
+        <br/>
+        
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+       <div id="buildings"></div>
+
+       <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="#">&raquo;</a>
+      </div>
+      
+
+      </div>
+    </div>
+  </main>
+
+  <script src="./../app.js"></script>
+</body>
+</html>

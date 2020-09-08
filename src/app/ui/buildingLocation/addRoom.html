@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Institution</title>
+  <link rel="stylesheet" href="./../bootstrap.min.css">
+  <link rel="stylesheet" href="./../css/buildingLocation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+<br/>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="./../index.html">Home</a></li>
+    <li class="breadcrumb-item active">Location</li>
+  </ol>
+ <h4 style="text-align: center;">Room Location Info</h4>
+ <button class="btn btn-success" onclick="document.location='addBuildingRooms.html'" style="margin-left:0.5em;">BACK TO HOME</button>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 p-4 my-auto">
+        <!-- Product Form -->
+        <form id="roomForm" class="card card-body">
+            <div class="card-header">Room</div>
+            
+            <hr class="cell-divide-hr">
+            <div class="form-group">
+                <select class="form-control" id="rBuild">
+                  <option disabled>-SELECT THE BUILDING-</option>
+                  <option value="new building">NEW BUILDING</option>
+                  <option value="computer faculty building">COMPUTER FACULTY BUILDING</option>
+                  <option value="engineering building">ENGINEERING BUILDING</option>
+                  <option value="hotel building">HOTEL BUILDING</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" id="rName" placeholder="Room Name" class="form-control" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="number" id="rCapacity" placeholder="Room Capacity" step="any" class="form-control">
+            </div>
+            <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="rLectureHall" name="customRadio" class="custom-control-input" checked="">
+                  <label class="custom-control-label" for="customRadio1">Lecture hall</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="rLaboratory" name="customRadio" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadio2">Laboratory</label>
+                </div>
+              </div>
+            <button type="submit" class="btn btn-primary">
+              Save
+            </button>
+          </form>
+      </div>
+
+         <!-- Product List -->
+      <div class="col-md-6">
+        <br/>
+       <div id="rooms"></div> 
+      </div>
+
+    </div>
+  </main>
+  <script src="./../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "timetablemanagement",
+  "version": "1.0.0",
+  "description": "Electron with mongo",
+  "main": "src/app/index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nipundimantha/TimeTableManagement.git"
+  },
+  "author": "2020-JUN-WE-05",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nipundimantha/TimeTableManagement/issues"
+  },
+  "homepage": "https://github.com/nipundimantha/TimeTableManagement#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "electron": "^8.2.0",
+    "mongoose": "^5.9.7"
+  }
+}
