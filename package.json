@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/nipundimantha/TimeTableManagement#readme",
   "dependencies": {
+    "electron": "^8.5.1",
     "express": "^4.17.1",
-    "electron": "^8.2.0",
-    "mongoose": "^5.9.7"
+    "mongoose": "^5.10.3"
   }
 }

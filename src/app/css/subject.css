@@ -1,0 +1,100 @@
+#services .add_tag_box {
+    padding: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
+    background: #fff;
+    transition: 0.4s;
+}
+  
+#services .add_tag_box .icon {
+    float: left;
+}
+  
+#services .add_tag_box .icon i {
+    color: #444;
+    font-size: 64px;
+    transition: 0.5s;
+    line-height: 0;
+    margin-top: 34px;
+}
+  
+#services .add_tag_box .icon i:before {
+    background: #0c2e8a;
+    background: linear-gradient(45deg, #50d8af 0%, #a3ebd5 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+#services .add_tag_box h5 {
+    margin-left: 80px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+  
+#services .add_tag_box h5 a {
+    color: #444;
+}
+  
+#services .add_tag_box p {
+    font-size: 14px;
+    margin-left: 100px;
+    margin-bottom: 0;
+    line-height: 24px;
+}
+
+#services .add_tag_time_box {
+    padding: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+    box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
+    background: #fff;
+    transition: 0.4s;
+}
+  
+#services .add_tag_time_box .icon {
+    float: left;
+}
+  
+#services .add_tag_time_box .icon i {
+    color: #444;
+    font-size: 64px;
+    transition: 0.5s;
+    line-height: 0;
+    margin-top: 34px;
+}
+  
+#services .add_tag_time_box .icon i:before {
+    background: #0c2e8a;
+    background: linear-gradient(45deg, #50d8af 0%, #a3ebd5 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+#services .add_tag_time_box h6 {
+    margin-left: 80px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+  
+#services .add_tag_time_box h5 a {
+    color: #444;
+}
+  
+#services .add_tag_time_box p {
+    font-size: 14px;
+    margin-left: 100px;
+    margin-bottom: 0;
+    line-height: 24px;
+}
+
+.add_tag_submit_btn {
+    padding-top: 20px;
+    padding-left: 520px;
+}

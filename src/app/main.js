@@ -3,8 +3,6 @@ const Task = require("./models/Task");
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 500,
-    height: 700,
     webPreferences: {
       nodeIntegration: true
     }
