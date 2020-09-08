@@ -4,8 +4,11 @@ const Tag = require("./models/students&tags/Tag");
 
 function createWindow() {
   const win = new BrowserWindow({
+<<<<<<< HEAD
     width: 700,
     height: 700,
+=======
+>>>>>>> 651a0e98a4dafbf04b7320e6fc97beb55e3f272e
     webPreferences: {
       nodeIntegration: true
     }
