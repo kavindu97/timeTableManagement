@@ -44,7 +44,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="category">
+                    <select class="form-control form-control-lg" id="category" autofocus>
                         <option>Category select</option>
                         <option>Lecture</option>
                         <option>Lab</option>
@@ -81,7 +81,7 @@
             </div>
             <div class="col-sm-6">
               <div class="add_tag_box wow fadeInLeft">
-                <input type="text" id="group" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Group">
+                <input type="text" id="group" class="form-control" placeholder="Add Group">
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@
             </div>
             <div class="col-sm-6">
               <div class="add_tag_box wow fadeInLeft">
-                <input type="text" id="subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Subject">
+                <input type="text" id="subject" class="form-control" placeholder="Add Subject">
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@
             </div>
             <div class="col-sm-6">
               <div class="add_tag_box wow fadeInLeft">
-                <input type="time" id="startingTime" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="time" id="startingTime" class="form-control">
               </div>
             </div>
           </div>
@@ -117,11 +117,10 @@
             </div>
             <div class="col-sm-6">
               <div class="add_tag_box wow fadeInLeft">
-                <input type="time" id="endingTime" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write a note ..">
+                <input type="time" id="endingTime" class="form-control"  placeholder="Write a note ..">
               </div>
             </div>
           </div>
-
           <div class="row">
             <div class="col-sm-6">
               <div class="add_tag_box wow fadeInLeft">
@@ -130,17 +129,23 @@
             </div>
             <div class="col-sm-6">
               <div class="add_tag_box wow fadeInLeft">
-                <input type="text" id="note" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write a note ..">
+                <input type="text" id="note" class="form-control" placeholder="Write a note ..">
               </div>
             </div>
           </div>
           <div class="add_tag_submit_btn">
             <button type="submit" class="btn btn-primary">Add Tag</button>
           </div>
+          <div class="add_tag_submit_btn">
+            <a href="tag_list.html" class="btn btn-primary">BACK</a></button>
+          </div>
         </form>
       </div>
     </section>
-  <script src="ui/app.js"></script>
+
+     <ul id="tagList"></ul>
+    <script src="ui/app.js"></script>
+  <!-- <script src="ui/app.js"></script> -->
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
