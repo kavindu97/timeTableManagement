@@ -20,6 +20,7 @@
   "dependencies": {
     "electron": "^8.5.1",
     "express": "^4.17.1",
-    "mongoose": "^5.10.3"
+    "mongoose": "^5.10.3",
+    "mongose": "0.0.2-security"
   }
 }

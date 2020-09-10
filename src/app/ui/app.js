@@ -51,13 +51,13 @@ function renderTags(tags) {
   tagList.innerHTML = `<table class="table table-striped">
   <thead>
           <tr>
-          <th style="width:100px; display:inline-block; overflow:hidden">Tag</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">Batch</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">Group</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">Subject</th>
-          <th style="width:150px; display:inline-block; overflow:hidden">Starting Time</th>
-          <th style="width:150px; display:inline-block; overflow:hidden">Ending Time</th>
-          <th style="width:198px; display:inline-block; overflow:hidden">Action</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">Tag</th>
+          <th style="width:80px; display:inline-block; overflow:hidden">Batch</th>
+          <th style="width:80px; display:inline-block; overflow:hidden">Group</th>
+          <th style="width:100px; display:inline-block; overflow:hidden">Subject</th>
+          <th style="width:75px; display:inline-block; overflow:hidden">Starting</th>
+          <th style="width:75px; display:inline-block; overflow:hidden">Ending</th>
+          <th style="width:99px; display:inline-block; overflow:hidden">Action</th>
           </tr>
         </thead>
         </table>
@@ -68,13 +68,13 @@ function renderTags(tags) {
           <table class="table table-striped">
                 <tbody>
                   <tr>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.category}</td>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.batch}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.group}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.subject}</td>
-                    <td style="width:150px; display:inline-block; overflow:hidden">${t.startingTime}</td>
-                    <td style="width:150px; display:inline-block; overflow:hidden">${t.endingTime}</td>
-                    <td style="width:198px; display:inline-block; overflow:hidden">
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.category}</td>
+                    <td style="width:90px; display:inline-block; overflow:hidden">${t.batch}</td>
+                    <td style="width:80px; display:inline-block; overflow:hidden">${t.group}</td>
+                    <td style="width:100px; display:inline-block; overflow:hidden">${t.subject}</td>
+                    <td style="width:75px; display:inline-block; overflow:hidden">${t.startingTime}</td>
+                    <td style="width:75px; display:inline-block; overflow:hidden">${t.endingTime}</td>
+                    <td style="width:px; display:inline-block; overflow:hidden">
                     <button class="btn btn-success" onclick="editTag('${t._id}')">
                    Edit
                 </button>
@@ -93,6 +93,7 @@ ipcRenderer.send("get-tags");
 
 
 tagForm.addEventListener("submit", async (e) => {
+  console.log("fghghf");
   e.preventDefault();
 
   const tag = {

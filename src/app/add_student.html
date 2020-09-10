@@ -33,139 +33,142 @@
           <a href="index.html"><h2>Students Details</h2></a>
           <p></p>
         </div>
-        
-      <div class="row">
-		    <div class="col-lg-3">
-          <div class="add_student_box wow fadeInLeft">
-            <h4 class="title"><a href="">Acedemic Year</a></h4>
-          </div>
-          <div class="add_student_box wow fadeInLeft" data-wow-delay="0.2s">
-            <h4 class="title"><a href="">Programme</a></h4>
-          </div>
-          <div class="add_student_box wow fadeInLeft">
-            <h4 class="title"><a href="">Group Count</a></h4>
-          </div>
-          <div class="add_student_box wow fadeInLeft" data-wow-delay="0.2s">
-            <h4 class="title"><a href="">Sub Group Count</a></h4>
-          </div>
-        </div>
-
-		    <div class="col-lg-3">
-            <div class="student_filed">
-              <div class="add_tag_box wow fadeInLeft">
-                <select class="form-control form-control-lg">
-                    <option>Acedemic Year</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option selected="selected">3</option>
-                    <option>4</option>
-                </select>
+        <form id="studentForm">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="add_student_box wow fadeInLeft">
+                <h4 class="title"><a href="">Acedemic Year</a></h4>
+              </div>
+              <div class="add_student_box wow fadeInLeft" data-wow-delay="0.2s">
+                <h4 class="title"><a href="">Programme</a></h4>
+              </div>
+              <div class="add_student_box wow fadeInLeft">
+                <h4 class="title"><a href="">Group Count</a></h4>
+              </div>
+              <div class="add_student_box wow fadeInLeft" data-wow-delay="0.2s">
+                <h4 class="title"><a href="">Sub Group Count</a></h4>
               </div>
             </div>
-            <div class="student_filed">
-              <div class="add_tag_box wow fadeInLeft">
-                <select class="form-control form-control-lg">
-                    <option>Programme select</option>
-                    <option>Information Technology</option>
-                    <option selected="selected">Computer Science & Networking Engineering</option>
-                    <option>Information System Engineering</option>
-                    <option>Cyber Security</option>
-                    <option>Software Engineering</option>
-                    <option>Data Science</option>
-                    <option>Interactive Media</option>
-                </select>
-              </div>
+    
+            <div class="col-lg-3">
+                <div class="student_filed">
+                  <div class="add_tag_box wow fadeInLeft">
+                    <select class="form-control form-control-lg" id="acedemicYear">
+                        <option>Acedemic Year</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option selected="selected">3</option>
+                        <option>4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="student_filed">
+                  <div class="add_tag_box wow fadeInLeft">
+                    <select class="form-control form-control-lg" id="programme">
+                        <option>Programme select</option>
+                        <option>Information Technology</option>
+                        <option selected="selected">Computer Science & Networking Engineering</option>
+                        <option>Information System Engineering</option>
+                        <option>Cyber Security</option>
+                        <option>Software Engineering</option>
+                        <option>Data Science</option>
+                        <option>Interactive Media</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="student_filed">
+                  <div class="add_tag_box wow fadeInLeft">
+                    <input type="text" class="form-control" id="groupCount" aria-describedby="emailHelp" placeholder="4" id="groupCount">
+                  </div>
+                </div>
+                <div class="student_filed">
+                  <div class="add_tag_box wow fadeInLeft">
+                    <input type="text" class="form-control" id="subGroupCount" aria-describedby="emailHelp" placeholder="2" id="subGroupCount">
+                  </div>
+                </div>    
+                  
             </div>
-            <div class="student_filed">
-              <div class="add_tag_box wow fadeInLeft">
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="4">
-              </div>
+      
+            <div class="col-lg-3">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Group IDs</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Y3S2SE.01</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.02</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.03</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.04</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="student_filed">
-              <div class="add_tag_box wow fadeInLeft">
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="2">
-              </div>
-            </div>    
-              
-        </div>
-  
-		    <div class="col-lg-3">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Group IDs</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Y3S2SE.01</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">Y3S2SE.02</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">Y3S2SE.03</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">Y3S2SE.04</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-lg-3">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Sub Group IDs</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Y3S2SE.01.01</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">Y3S2SE.01.02</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">Y3S2SE.02.01</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">Y3S2SE.02.02</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">Y3S2SE.03.01</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-              <tr>
-                <th scope="row">Y3S2SE.03.02</th>
-                <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
-              </tr>
-              
-
-            </tbody>
-          </table>
-        </div>
-
-        <div class="student_btn_section">
-          <a href="student_list.html"><button type="submit" class="btn btn-primary">Submit</button></a>
-          <a href=""><button type="submit" class="btn btn-success">Edit</button></a>
-          <a href=""><button type="submit" class="btn btn-warning">Delete</button></a>
-        </div>
-
-      </div>
+            <div class="col-lg-3">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Sub Group IDs</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Y3S2SE.01.01</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.01.02</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.02.01</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.02.02</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.03.01</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.03.02</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  
+    
+                </tbody>
+              </table>
+            </div>
+    
+            <div class="student_btn_section">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+    
+          </div>
+        </form>
+      
 
       </div>
     </section>
+
+  <ul id="studentList"></ul>
+  <script src="ui/app_student.js"></script>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 

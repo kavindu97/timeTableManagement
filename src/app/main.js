@@ -1,14 +1,10 @@
 const { BrowserWindow, ipcMain } = require("electron");
 const Task = require("./models/Task");
 const Tag = require("./models/students&tags/Tag");
+const Student = require("./models/students&tags/Student");
 
 function createWindow() {
   const win = new BrowserWindow({
-<<<<<<< HEAD
-    width: 700,
-    height: 700,
-=======
->>>>>>> 651a0e98a4dafbf04b7320e6fc97beb55e3f272e
     webPreferences: {
       nodeIntegration: true
     }
@@ -78,6 +74,7 @@ function createWindow() {
 //new Update Tag
 
 ipcMain.on("new-tag", async (e, arg) => {
+  console.log("newtag")
   const newTag = new Tag(arg);
   const tagSaved = await newTag.save();
   console.log(tagSaved);
@@ -95,8 +92,8 @@ ipcMain.on("delete-tag", async (e, args) => {
 });
 
 ipcMain.on("update-tag", async (e, args) => {
-  console.log(args);
-  const updatedTag = await Task.findByIdAndUpdate(
+  console.log(args+"dghdfh");
+  const updatedTag = await Tag.findByIdAndUpdate(
     args.idTagToUpdate,
     { category: args.category, batch: args.batch, group: args.group, subject: args.subject,
       startingTime: args.startingTime, endingTime: args.endingTime, note: args.note },
@@ -104,6 +101,61 @@ ipcMain.on("update-tag", async (e, args) => {
   );
   e.reply("update-tag-success", JSON.stringify(updatedTag));
 });
+
+
+
+
+
+
+
+
+
+ipcMain.on("new-student", async (e, arg) => {
+  console.log("newstudent")
+  const newStudent = new Student(arg);
+  const studentSaved = await newStudent.save();
+  console.log(studentSaved);
+  e.reply("new-student-created", JSON.stringify(studentSaved));
+});
+
+ipcMain.on("get-students", async (e, arg) => {
+  const students = await Student.find();
+  e.reply("get-students", JSON.stringify(students));
+});
+
+ipcMain.on("delete-student", async (e, args) => {
+  const studentDeleted = await Student.findByIdAndDelete(args);
+  e.reply("delete-student-success", JSON.stringify(studentDeleted));
+});
+
+ipcMain.on("update-student", async (e, args) => {
+  console.log(args);
+  const updatedStudent = await Student.findByIdAndUpdate(
+    args.idStudentToUpdate,
+    { acedemicYear: args.acedemicYear, programme: args.programme, groupCount: args.groupCount, subGroupCount: args.subGroupCount},
+    { new: true }
+  );
+  e.reply("update-student-success", JSON.stringify(updatedStudent));
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 module.exports = { createWindow };

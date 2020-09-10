@@ -8,7 +8,7 @@
   <meta content="" name="description">
 
   <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <liynk href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 
@@ -30,9 +30,26 @@
      
     <section id="services">
       <div class="container">
-        <div class="section-header">
-          <a href="index.html"><h2>Add tag</h2></a>
-          <p></p>
+
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="section-header">
+              <a href="index.html" ><h2>Add tag</h2></a>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="section-header">
+              <a id="add_tag" onclick="show_hide()"><h2>Add tag</h2></a>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="section-header">
+              <a id="tag_list"><h2>Tag List</h2></a>
+              <p></p>
+            </div>
+          </div>
         </div>
 
         <form id="tagForm">
@@ -140,11 +157,38 @@
             <a href="tag_list.html" class="btn btn-primary">BACK</a></button>
           </div>
         </form>
+
+        <div id="list">
+          <div class="row">
+            <div class="col-sm-12">
+              <ul id="tagList"></ul>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
 
-     <ul id="tagList"></ul>
-    <script src="ui/app.js"></script>
+    <div >
+
+      <script>
+        function show_hide() {
+          var x = document.getElementById("list");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
+
+
+    
+
+
+
+    
+  <script src="ui/app.js"></script>
   <!-- <script src="ui/app.js"></script> -->
 
   <!-- JavaScript Libraries -->
