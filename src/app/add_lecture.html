@@ -35,7 +35,18 @@
           <p></p>
         </div>
 
-        <form id="tagForm">
+        <div id="list">
+          <div class="row">
+            <div class="col-sm-12">
+              <ul id="lectureList"></ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <form id="lectureForm">
           <div class="row">
             <div class="col-sm-6">
                 <div class="add_tag_box wow fadeInLeft">
@@ -44,7 +55,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="add_tag_box wow fadeInLeft">
-                    <input type="text" id="group" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Lecture's Name">
+                    <input type="text" id="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Lecture's Name">
                   </div>
             </div>
           </div>
@@ -56,7 +67,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="add_tag_box wow fadeInLeft">
-                    <input type="text" id="group" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Employee ID">
+                    <input type="text" id="employeeID" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Employee ID">
                 </div>
             </div>
           </div>
@@ -68,7 +79,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="faculty">
                         <option>Faculty Of Computing</option>
                         <option>Faculty Of Engineering</option>
                         <option>Faculty Of Business</option>
@@ -85,7 +96,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="department">
                         <option>Information Technology</option>
                         <option>Computer Scienece and Software Engineering</option>
                         <option>Civil Engineering</option>
@@ -102,7 +113,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="center">
                         <option>Malambe Center</option>
                         <option>Metro Campus</option>
                         <option>Kandy Center</option>
@@ -121,7 +132,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="building">
                         <option>Computing Building</option>
                         <option>New Building</option>
                         <option>Engineering Building</option>
@@ -139,7 +150,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="category">
                         <option>Professor</option>
                         <option>Assistant Professor</option>
                         <option>Senior Lecture (HG)</option>
@@ -158,7 +169,7 @@
         </form>
       </div>
     </section>
-  <script src="ui/app.js"></script>
+  <script src="ui/app_lecture.js"></script>
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>

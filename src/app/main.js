@@ -5,6 +5,8 @@ const Time30 = require("./models/timeManagement/Time30");
 const Time60 = require("./models/timeManagement/Time60");
 const Working = require("./models/timeManagement/Working");
 const Student = require("./models/students&tags/Student");
+const Subject = require("./models/lecture&modules/Subject");
+const Lecture = require("./models/lecture&modules/Lecture");
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -188,6 +190,90 @@ ipcMain.on("update-working", async (e, args) => {
     { new: true }
   );
   e.reply("update-working-success", JSON.stringify(updatedWorking));
+});
+
+ipcMain.on("new-time60", async (e, arg) => {
+  console.log("newtime60");
+  const newTime60 = new Time60(arg);
+  const time60Saved = await newTime60.save();
+  console.log(time60Saved);
+  e.reply("new-time60-created", JSON.stringify(time60Saved));
+});
+
+ipcMain.on("new-subject", async (e, arg) => {
+  console.log("newsubject");
+  const newSubject = new Subject(arg);
+  const subjectSaved = await newSubject.save();
+  console.log(subjectSaved);
+  e.reply("new-subject-created", JSON.stringify(subjectSaved));
+});
+
+ipcMain.on("get-subjects", async (e, arg) => {
+  const subjects = await Subject.find();
+  e.reply("get-subjects", JSON.stringify(subjects));
+});
+
+ipcMain.on("delete-subject", async (e, args) => {
+  const subjectDeleted = await Subject.findByIdAndDelete(args);
+  e.reply("delete-subject-success", JSON.stringify(subjectDeleted));
+});
+
+ipcMain.on("update-subject", async (e, args) => {
+  console.log(args);
+  const updatedSubject = await Subject.findByIdAndUpdate(
+    args.idSubjectToUpdate,
+    {
+      offeredYear: args.offeredYear,
+      offeredSemester: args.offeredSemester,
+      tuesday: args.tuesday,
+      wednesday: args.wednesday,
+      thursday: args.thursday,
+      friday: args.friday,
+      saturday: args.saturday,
+      sunday: args.sunday,
+      hours: args.hours,
+      minutes: args.minutes,
+    },
+    { new: true }
+  );
+  e.reply("update-subject-success", JSON.stringify(updatedSubject));
+});
+
+
+ipcMain.on("new-lecture", async (e, arg) => {
+  console.log("newlecture");
+  const newLecture = new Lecture(arg);
+  const lectureSaved = await newLecture.save();
+  console.log(lectureSaved);
+  e.reply("new-lecture-created", JSON.stringify(lectureSaved));
+});
+
+ipcMain.on("get-lectures", async (e, arg) => {
+  const lectures = await Lecture.find();
+  e.reply("get-lectures", JSON.stringify(lectures));
+});
+
+ipcMain.on("delete-lecture", async (e, args) => {
+  const lectureDeleted = await Lecture.findByIdAndDelete(args);
+  e.reply("delete-lecture-success", JSON.stringify(lectureDeleted));
+});
+
+ipcMain.on("update-lecture", async (e, args) => {
+  console.log(args);
+  const updatedLecture = await Lecture.findByIdAndUpdate(
+    args.idLectureToUpdate,
+    {
+      name: args.name,
+      employeeID: args.employeeID,
+      faculty: args.faculty,
+      department: args.department,
+      center: args.center,
+      building: args.building,
+      category: args.saturday,
+    },
+    { new: true }
+  );
+  e.reply("update-lecture-success", JSON.stringify(updatedLecture));
 });
 
 module.exports = { createWindow };
