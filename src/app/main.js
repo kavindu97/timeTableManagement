@@ -149,7 +149,6 @@ ipcMain.on("update-student", async (e, args) => {
 
 
 
-
 ipcMain.on("new-time30", async (e, arg) => {
   console.log("newtime30")
   const newTime30 = new Time30(arg);
