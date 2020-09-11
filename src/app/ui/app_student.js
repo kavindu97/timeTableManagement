@@ -41,12 +41,13 @@ function renderStudents(students) {
   studentList.innerHTML = `<table class="table table-striped">
   <thead>
           <tr>
-          <th style="width:100px; display:inline-block; overflow:hidden">Acedemic Year</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">Programme</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">Group Count</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">Sub Group Count</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">Group IDs</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">Sub Group IDs</th>
+          <th style="width:90px; display:inline-block; overflow:hidden">A. Year</th>
+          <th style="width:110px; display:inline-block; overflow:hidden">Programme</th>
+          <th style="width:70px; display:inline-block; overflow:hidden">Count</th>
+          <th style="width:100px; display:inline-block; overflow:hidden">S. Count</th>
+          <th style="width:80px; display:inline-block; overflow:hidden">IDs</th>
+          <th style="width:110px; display:inline-block; overflow:hidden">S.IDs</th>
+          <th style="width:100px; display:inline-block; overflow:hidden">Action</th>
           </tr>
         </thead>
         </table>
@@ -57,17 +58,17 @@ function renderStudents(students) {
           <table class="table table-striped">
                 <tbody>
                   <tr>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.acedemicYear}</td>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.programme}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.groupCount}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.subGroupCount}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.groupCount}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.subGroupCount}</td>
+                    <td style="width:90px; display:inline-block; overflow:hidden">${t.acedemicYear}</td>
+                    <td style="width:120px; display:inline-block; overflow:hidden">${t.programme}</td>
+                    <td style="width:90px; display:inline-block; overflow:hidden">${t.groupCount}</td>
+                    <td style="width:80px; display:inline-block; overflow:hidden">${t.subGroupCount}</td>
+                    <td style="width:80px; display:inline-block; overflow:hidden">${t.groupCount}</td>
+                    <td style="width:90px; display:inline-block; overflow:hidden">${t.subGroupCount}</td>
                     <td style="width:198px; display:inline-block; overflow:hidden">
-                    <button class="btn btn-success" onclick="editStudent('${t._id}')">
+                    <button class="btn btn-outline-success" onclick="editStudent('${t._id}')">
                    Edit
                 </button>
-                    <button class="btn btn-danger" onclick="deleteStudent('${t._id}')">
+                    <button class="btn btn-outline-danger" onclick="deleteStudent('${t._id}')">
                     Delete
                   </button>
                 </td>

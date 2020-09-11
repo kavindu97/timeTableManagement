@@ -29,37 +29,23 @@
 <body id="body">
      
     <section id="services">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-sm-2">
-            <div class="section-header">
-              <a href="index.html" ><h2>Add tag</h2></a>
-              <p></p>
-            </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="section-header">
-              <a id="add_tag" onclick="show_hide()"><h2>Add tag</h2></a>
-              <p></p>
-            </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="section-header">
-              <a id="tag_list"><h2>Tag List</h2></a>
-              <p></p>
-            </div>
-          </div>
+		<div class="row">
+			<button class="btn btn-outline-primary"" onclick="document.location='index.html'" style="margin-left:3em; height:40px" >BACK</button>
+		<div class="section-header" style="margin-left:12em;">
+          <a href="index.html"><h2>Append Tag</h2></a>
+          <p></p>
         </div>
+            </div>
+         <br/> 
 
         <form id="tagForm">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
                   <h5 class="title"><a>Category</a></h5>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
                     <select class="form-control form-control-lg" id="category" autofocus>
                         <option>Category select</option>
@@ -71,12 +57,12 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
                     <h5 class="title"><a>Batch</a></h5>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <select class="form-control form-control-lg" id="batch">
                     <option>Y3S2SE</option>
@@ -91,73 +77,73 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Group</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <input type="text" id="group" class="form-control" placeholder="Add Group">
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Subject</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <input type="text" id="subject" class="form-control" placeholder="Add Subject">
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Starting Time</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <input type="time" id="startingTime" class="form-control">
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Ending Time</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <input type="time" id="endingTime" class="form-control"  placeholder="Write a note ..">
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Note</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <input type="text" id="note" class="form-control" placeholder="Write a note ..">
               </div>
             </div>
           </div>
           <div class="add_tag_submit_btn">
-            <button type="submit" class="btn btn-primary">Add Tag</button>
+            <button type="submit" class="btn btn-primary" style="margin-left:-7.5em; width:350px"> SAVE</button>
           </div>
-          <div class="add_tag_submit_btn">
-            <a href="tag_list.html" class="btn btn-primary">BACK</a></button>
-          </div>
+          
         </form>
 
+		<div class="col-sm-12" style="margin-left:50em; margin-top:-32em" >
+              <div class="add_tag_box wow fadeInLeft">
         <div id="list">
           <div class="row">
             <div class="col-sm-12">
@@ -165,7 +151,7 @@
             </div>
           </div>
         </div>
-        
+        </div></div>
       </div>
     </section>
 

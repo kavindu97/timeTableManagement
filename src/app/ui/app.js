@@ -51,10 +51,10 @@ function renderTags(tags) {
   tagList.innerHTML = `<table class="table table-striped">
   <thead>
           <tr>
-          <th style="width:50px; display:inline-block; overflow:hidden">Tag</th>
-          <th style="width:80px; display:inline-block; overflow:hidden">Batch</th>
-          <th style="width:80px; display:inline-block; overflow:hidden">Group</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">Subject</th>
+          <th style="width:90px; display:inline-block; overflow:hidden">Tag</th>
+          <th style="width:60px; display:inline-block; overflow:hidden">Batch</th>
+          <th style="width:60px; display:inline-block; overflow:hidden">Group</th>
+          <th style="width:70px; display:inline-block; overflow:hidden">Subject</th>
           <th style="width:75px; display:inline-block; overflow:hidden">Starting</th>
           <th style="width:75px; display:inline-block; overflow:hidden">Ending</th>
           <th style="width:99px; display:inline-block; overflow:hidden">Action</th>
@@ -68,17 +68,17 @@ function renderTags(tags) {
           <table class="table table-striped">
                 <tbody>
                   <tr>
-                    <td style="width:50px; display:inline-block; overflow:hidden">${t.category}</td>
-                    <td style="width:90px; display:inline-block; overflow:hidden">${t.batch}</td>
-                    <td style="width:80px; display:inline-block; overflow:hidden">${t.group}</td>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.subject}</td>
+                    <td style="width:90px; display:inline-block; overflow:hidden">${t.category}</td>
+                    <td style="width:60px; display:inline-block; overflow:hidden">${t.batch}</td>
+                    <td style="width:60px; display:inline-block; overflow:hidden">${t.group}</td>
+                    <td style="width:70px; display:inline-block; overflow:hidden">${t.subject}</td>
                     <td style="width:75px; display:inline-block; overflow:hidden">${t.startingTime}</td>
                     <td style="width:75px; display:inline-block; overflow:hidden">${t.endingTime}</td>
                     <td style="width:px; display:inline-block; overflow:hidden">
-                    <button class="btn btn-success" onclick="editTag('${t._id}')">
+                    <button class="btn btn-outline-success" onclick="editTag('${t._id}')">
                    Edit
                 </button>
-                    <button class="btn btn-danger" onclick="deleteTag('${t._id}')">
+                    <button class="btn btn-outline-danger" onclick="deleteTag('${t._id}')">
                     Delete
                   </button>
                 </td>

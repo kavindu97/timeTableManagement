@@ -29,12 +29,14 @@
      
     <section id="services">
       <div class="container">
+	  			<button class="btn btn-outline-primary"" onclick="document.location='index.html'" style="margin-left:-12em; height:40px" >BACK</button>
+
         <div class="section-header">
           <a href="index.html"><h2>Students Details</h2></a>
           <p></p>
-        </div>
-        <form id="studentForm">
-          <div class="row">
+        </div><br/>
+        <form id="studentForm" onsubmit="return validateForm()" method="post">
+          <div class="row" style="margin-left:-10.5em;">
             <div class="col-lg-3">
               <div class="add_student_box wow fadeInLeft">
                 <h4 class="title"><a href="">Acedemic Year</a></h4>
@@ -85,11 +87,16 @@
                   <div class="add_tag_box wow fadeInLeft">
                     <input type="text" class="form-control" id="subGroupCount" aria-describedby="emailHelp" placeholder="2" id="subGroupCount">
                   </div>
-                </div>    
+                </div> 
+					<br/><br/>
+					<div class="student_btn_section">
+              <button type="submit" class="btn btn-primary" style="margin-left:-11em; width:290px">Submit</button>
+            </div>
                   
             </div>
+			
       
-            <div class="col-lg-3">
+            <!-- <div class="col-lg-3">
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -116,8 +123,8 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div class="col-lg-3">
+            </div> -->
+            <!-- <div class="col-lg-3">
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -154,11 +161,9 @@
     
                 </tbody>
               </table>
-            </div>
+            </div> -->
     
-            <div class="student_btn_section">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+            
     
           </div>
         </form>
@@ -167,7 +172,35 @@
       </div>
     </section>
 
+
+          <div class="studentList" style="margin-left:45.5em; margin-top:-20em;">
+
   <ul id="studentList"></ul>
+  
+  <div/>
+  <script>
+  function validateForm() {
+  var x = document.forms["studentForm"]["acedemicYear"].value;
+  if (x == "") {
+    alert("Acedemic Year must be filled out");
+    return false;
+  }
+  var y = document.forms["studentForm"]["programme"].value;
+  if (y == "") {
+    alert("programme must be filled out");
+    return false;
+  var z = document.forms["studentForm"]["groupCount"].value;
+  if (z == "") {
+    alert("groupCount must be filled out");
+    return false;
+  var a = document.forms["studentForm"]["subGroupCount"].value;
+  if (a == "") {
+    alert("subGroupCount must be filled out");
+    return false;	
+	
+  }
+}
+  </script>
   <script src="ui/app_student.js"></script>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>

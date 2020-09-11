@@ -4,6 +4,7 @@ const Tag = require("./models/students&tags/Tag");
 const Time30 = require("./models/timeManagement/Time30");
 const Time60 = require("./models/timeManagement/Time60");
 const Working = require("./models/timeManagement/Working");
+const Student = require("./models/students&tags/Student")
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -139,13 +140,6 @@ ipcMain.on("update-student", async (e, args) => {
   );
   e.reply("update-student-success", JSON.stringify(updatedStudent));
 });
-
-
-
-
-
-
-
 
 
 
