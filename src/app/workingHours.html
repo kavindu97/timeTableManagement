@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <meta name="description" content="Create a stylish landing page for your business startup and get leads for the offered services with this HTML landing page template.">
+    <meta name="author" content="Inovatik">
+
+	<meta property="og:site_name" content="" /> 
+	<meta property="og:site" content="" /> 
+	<meta property="og:title" content=""/> 
+	<meta property="og:description" content="" /> 
+	<meta property="og:image" content="" /> 
+	<meta property="og:url" content="" /> 
+	<meta property="og:type" content="article" />
+
+    <title>Real Time Management</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top"><br/>
+    <a class="btn-solid-reg page-scroll" href="View.html"> Back </a>
+
+    <div id="pricing" class="cards-2">
+        <div class="container">
+            <div class="row">
+           
+            <div class="row">
+                <div class="col-lg-20">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">Working Time (per day)</div><br/>
+                                <hr class="cell-divide-hr">
+                                    <div class="price"><br/><br/>
+                                         <div class="frequency">Hours</div><br/>
+									        <div class="qty">
+										        <span id="dec" onclick="dec()">-</span>
+										        <input type="text" id="qty" value="00" />
+										        <span id="inc" onclick="inc()">+</span>
+									        </div>
+                                        </div>
+							            <div class="price">
+                                            <div class="frequency">Minutes</div><br/>
+									        <div class="qty">
+										        <span id="dec" onclick="decTime()">-</span>
+										        <input type="text" id="qty1" value="00" />
+										        <span id="inc" onclick="incTime()">+</span>
+									        </div> 
+                                        </div><br/><br/><br/>
+                                        <hr class="cell-divide-hr"><br/>
+                                        <div class="button-wrapper">
+                                            <button type="submit" class="btn btn-primary">UPDATE</button>
+                                        </div>
+                                        </div> 
+    
+    <script type="text/javascript">
+      /*Increament*/
+      function incTime() {
+        var qty1 = document.getElementById("qty1").value;
+        qty1++;
+        if (qty1 <= 59) {
+          document.getElementById("qty1").value = qty1;
+        }
+      }
+
+      /*Decrement*/
+      function decTime() {
+        var qty1 = document.getElementById("qty1").value;
+        qty1--;
+        if (qty1 > 00) {
+          document.getElementById("qty1").value = qty1;
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      /*Increament*/
+      function inc() {
+        var qty = document.getElementById("qty").value;
+        qty++;
+        if (qty <= 23) {
+          document.getElementById("qty").value = qty;
+        }
+      }
+
+      /*Decrement*/
+      function dec() {
+        var qty = document.getElementById("qty").value;
+        qty--;
+        if (qty > 00) {
+          document.getElementById("qty").value = qty;
+        }
+      }
+    </script>
+
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script> 
+    <script src="js/swiper.min.js"></script> 
+    <script src="js/jquery.magnific-popup.js"></script> 
+    <script src="js/validator.min.js"></script> 
+    <script src="js/scripts.js"></script> 
+</body>
+</html>
