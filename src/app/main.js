@@ -1,7 +1,9 @@
 const { BrowserWindow, ipcMain } = require("electron");
 const Task = require("./models/Task");
 const Tag = require("./models/students&tags/Tag");
-const Student = require("./models/students&tags/Student");
+const Time30 = require("./models/timeManagement/Time30");
+const Time60 = require("./models/timeManagement/Time60");
+const Working = require("./models/timeManagement/Working");
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -137,6 +139,133 @@ ipcMain.on("update-student", async (e, args) => {
   );
   e.reply("update-student-success", JSON.stringify(updatedStudent));
 });
+
+
+
+
+
+
+
+
+
+
+
+ipcMain.on("new-time30", async (e, arg) => {
+  console.log("newtime30")
+  const newTime30 = new Time30(arg);
+  const time30Saved = await newTime30.save();
+  console.log(time30Saved);
+  e.reply("new-time30-created", JSON.stringify(time30Saved));
+});
+
+ipcMain.on("get-time30s", async (e, arg) => {
+  const time30s = await Time30.find();
+  e.reply("get-time30s", JSON.stringify(time30s));
+});
+
+ipcMain.on("delete-time30", async (e, args) => {
+  const time30Deleted = await Time30.findByIdAndDelete(args);
+  e.reply("delete-time30-success", JSON.stringify(time30Deleted));
+});
+
+ipcMain.on("update-time30", async (e, args) => {
+  console.log(args);
+  const updatedTime30 = await Time30.findByIdAndUpdate(
+    args.idTime30ToUpdate,
+    { startingTime30: args.startingTime30, endingTime30: args.endingTime30},
+    { new: true }
+  );
+  e.reply("update-time30-success", JSON.stringify(updatedTime30));
+});
+
+
+
+
+
+
+
+
+
+ipcMain.on("new-time60", async (e, arg) => {
+  console.log("newtime60")
+  const newTime60 = new Time60(arg);
+  const time60Saved = await newTime60.save();
+  console.log(time60Saved);
+  e.reply("new-time60-created", JSON.stringify(time60Saved));
+});
+
+ipcMain.on("get-time60s", async (e, arg) => {
+  const time60s = await Time60.find();
+  e.reply("get-time60s", JSON.stringify(time60s));
+});
+
+ipcMain.on("delete-time60", async (e, args) => {
+  const time60Deleted = await Time60.findByIdAndDelete(args);
+  e.reply("delete-time60-success", JSON.stringify(time60Deleted));
+});
+
+ipcMain.on("update-time60", async (e, args) => {
+  console.log(args);
+  const updatedTime60 = await Time60.findByIdAndUpdate(
+    args.idTime60ToUpdate,
+    { startingTime60: args.startingTime60, endingTime60: args.endingTime60},
+    { new: true }
+  );
+  e.reply("update-time60-success", JSON.stringify(updatedTime60));
+});
+
+
+
+
+
+
+
+
+
+
+
+ipcMain.on("new-working", async (e, arg) => {
+  console.log("1")
+  const newWorking = new Working(arg);
+  const workingSaved = await newWorking.save();
+  console.log(workingSaved);
+  e.reply("new-working-created", JSON.stringify(workingSaved));
+});
+
+
+ipcMain.on("new-time60", async (e, arg) => {
+  console.log("newtime60")
+  const newTime60 = new Time60(arg);
+  const time60Saved = await newTime60.save();
+  console.log(time60Saved);
+  e.reply("new-time60-created", JSON.stringify(time60Saved));
+});
+
+ipcMain.on("get-workings", async (e, arg) => {
+  const workings = await Working.find();
+  e.reply("get-workings", JSON.stringify(workings));
+});
+
+ipcMain.on("delete-working", async (e, args) => {
+  const workingDeleted = await Working.findByIdAndDelete(args);
+  e.reply("delete-working-success", JSON.stringify(workingDeleted));
+});
+
+ipcMain.on("update-working", async (e, args) => {
+  console.log(args);
+  const updatedWorking = await Working.findByIdAndUpdate(
+    args.idWorkingToUpdate,
+    { numberOfWorking: args.numberOfWorking, monday: args.monday, tuesday: args.tuesday, wednesday: args.wednesday, thursday: args.thursday, friday: args.friday, saturday: args.saturday, sunday: args.sunday, hours: args.hours, minutes: args.minutes},
+    { new: true }
+  );
+  e.reply("update-working-success", JSON.stringify(updatedWorking));
+});
+
+
+
+
+
+
 
 
 

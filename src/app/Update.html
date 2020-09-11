@@ -1,50 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <meta name="description" content="Create a stylish landing page for your business startup and get leads for the offered services with this HTML landing page template.">
-    <meta name="author" content="Inovatik">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta property="og:type" content="article" />
+    <meta
+      name="description"
+      content="Create a stylish landing page for your business startup and get leads for the offered services with this HTML landing page template."
+    />
+    <meta name="author" content="Inovatik" />
+
+    <meta property="og:site_name" content="" />
+    <!-- website name -->
+    <meta property="og:site" content="" />
+    <!-- website link -->
+    <meta property="og:title" content="" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" />
+    <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
 
     <!-- Website Title -->
     <title>Real Time Management</title>
-    
+
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	
-	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
-</head>
-<body data-spy="scroll" data-target=".fixed-top">
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/fontawesome-all.css" rel="stylesheet" />
+    <link href="css/swiper.css" rel="stylesheet" />
+    <link href="css/magnific-popup.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png" />
+  </head>
+  <body data-spy="scroll" data-target=".fixed-top">
+    <form id="workingForm">
+      <div class="form-group">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Number Of Days</label>
+          <select class="form-control" id="numberOfWorking">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="monday"
+          value="true"
+        />
+        <label class="form-check-label" for="exampleCheck1">Monday</label>
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="tuesday"
+          value="true"
+        />
+        <label class="form-check-label" for="exampleCheck1">Tuesday</label>
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="wednesday"
+          value="true"
+        />
+        <label class="form-check-label" for="exampleCheck1">Wednesday</label>
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="thursday"
+          value="true"
+        />
+        <label class="form-check-label" for="exampleCheck1">Thursday</label>
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="friday"
+          value="true"
+        />
+        <label class="form-check-label" for="exampleCheck1">Friday</label>
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="saturday"
+          value="true"
+        />
+        <label class="form-check-label" for="exampleCheck1">Saturday</label>
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="sunday"
+          value="true"
+        />
+        <label class="form-check-label" for="exampleCheck1">Sunday</label>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Hours</label>
+        <input
+          type="number"
+          class="form-control"
+          id="hours"
+          placeholder="Hours"
+          id="hours"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Minutes</label>
+        <input
+          type="number"
+          class="form-control"
+          id="minutes"
+          placeholder="Minutes"
+          id="minutes"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 
     <!-- Pricing -->
-    <div id="pricing" class="cards-2">
+    <!-- <div id="pricing" class="cards-2">
         <div class="container">
-            <!-- <div class="row">
+             <div class="row">
                 <div class="col-lg-12">
                     <h2>Working Days And Hours</h2>
                     <p class="p-heading p-large">Update details</p>
                 </div> end of col -->
-            
-            <div class="row">
-                <div class="col-lg-12">
 
-                    <!-- Card-->
-                    <div class="card">
+    <!-- <div class="row">
+                <div class="col-lg-12"> -->
+
+    <!-- Card-->
+    <!-- <div class="card">
                         <div class="card-body">
                             <div class="card-title">Number of working days</div><br/>
                             <hr class="cell-divide-hr">
@@ -83,11 +190,11 @@
                                 <a class="btn-solid-reg page-scroll" href="#request">UPDATE</a>
                             </div>
                         </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
+                    </div> end of card -->
+    <!-- end of card -->
 
-                    <!-- Card-->
-                    <div class="card">
+    <!-- Card-->
+    <!-- <div class="card">
                         <div class="card-body">
                             <div class="card-title">Working Days (select all)</div><br/>
                             <hr class="cell-divide-hr">
@@ -127,11 +234,11 @@
                                 <a class="btn-solid-reg page-scroll" href="#request">UPDATE</a>
                             </div>
                         </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
+                    </div> end of card -->
+    <!-- end of card -->
 
-                    <!-- Card-->
-                    <div class="card">
+    <!-- Card-->
+    <!-- <div class="card">
                         <div class="card-body">
                             <div class="card-title">Working Time (per day)</div><br/>
                             <hr class="cell-divide-hr">
@@ -155,64 +262,73 @@
                             <div class="button-wrapper">
                                 <a class="btn-solid-reg page-scroll" href="#request">UPDATE</a>
                             </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
+                        </div> -->
+    <!-- </div> end of card -->
+    <!-- end of card -->
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-2 -->
+    <!-- </div> end of col -->
+    <!-- </div> end of row -->
+    <!-- </div> end of container -->
+    <!-- </div> end of cards-2 -->
     <!-- end of pricing -->
-	<script type="text/javascript">
+    <script type="text/javascript">
       /*Increament*/
-    	function incTime() {
-    		var qty1 = document.getElementById('qty1').value;
-    		qty1++;
-    		if(qty1 <= 23) {
-    			document.getElementById('qty1').value = qty1;
-    		}
-    	}
+      function incTime() {
+        var qty1 = document.getElementById("qty1").value;
+        qty1++;
+        if (qty1 <= 23) {
+          document.getElementById("qty1").value = qty1;
+        }
+      }
 
-    	/*Decrement*/
-    	function decTime() {
-    		var qty = document.getElementById('qty1').value;
-    		qty1--;
-    		if(qty1 > 00){
-    			document.getElementById('qty1').value = qty1;
-    		}
-    	}
-		
-	</script>
-	<script type="text/javascript">
+      /*Decrement*/
+      function decTime() {
+        var qty = document.getElementById("qty1").value;
+        qty1--;
+        if (qty1 > 00) {
+          document.getElementById("qty1").value = qty1;
+        }
+      }
+    </script>
+    <script type="text/javascript">
       /*Increament*/
-    	function inc() {
-    		var qty = document.getElementById('qty').value;
-    		qty++;
-    		if(qty <= 23) {
-    			document.getElementById('qty').value = qty;
-    		}
-    	}
+      function inc() {
+        var qty = document.getElementById("qty").value;
+        qty++;
+        if (qty <= 23) {
+          document.getElementById("qty").value = qty;
+        }
+      }
 
-    	/*Decrement*/
-    	function dec() {
-    		var qty= document.getElementById('qty').value;
-    		qty--;
-    		if(qty > 00){
-    			document.getElementById('qty').value = qty;
-    		}
-    	}
-		
-	</script>
+      /*Decrement*/
+      function dec() {
+        var qty = document.getElementById("qty").value;
+        qty--;
+        if (qty > 00) {
+          document.getElementById("qty").value = qty;
+        }
+      }
+    </script>
+
+    <script src="ui/app_working.js"></script>
+    <script src="main.js"></script>
 
     <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
-</body>
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup for lightboxes -->
+    <script src="js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script>
+    <!-- Custom scripts -->
+  </body>
 </html>
