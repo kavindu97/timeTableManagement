@@ -29,7 +29,17 @@
 <body data-spy="scroll" data-target=".fixed-top"><br/>
     <a class="btn-solid-reg page-scroll" href="View.html"> Back </a>
 
-    <div id="pricing" class="cards-2">
+    <div id="list" style="margin-left:50em;>
+      <div class="row">
+        <div class="col-sm-12">
+          <ul id="workingHoursList"></ul>
+        </div>
+      </div>
+    </div>
+
+
+    <form id="workingHoursForm" style="margin-left:5em; margin-top:-8em">
+      <div id="pricing" class="cards-2">
         <div class="container">
             <div class="row">
            
@@ -43,7 +53,7 @@
                                          <div class="frequency">Hours</div><br/>
 									        <div class="qty">
 										        <span id="dec" onclick="dec()">-</span>
-										        <input type="text" id="qty" value="00" />
+										        <input type="text" id="hours" value="00" />
 										        <span id="inc" onclick="inc()">+</span>
 									        </div>
                                         </div>
@@ -51,7 +61,7 @@
                                             <div class="frequency">Minutes</div><br/>
 									        <div class="qty">
 										        <span id="dec" onclick="decTime()">-</span>
-										        <input type="text" id="qty1" value="00" />
+										        <input type="text" id="minutes" value="00" />
 										        <span id="inc" onclick="incTime()">+</span>
 									        </div> 
                                         </div><br/><br/><br/>
@@ -60,7 +70,11 @@
                                             <button type="submit" class="btn btn-primary">UPDATE</button>
                                         </div>
                                         </div> 
+    </form>
     
+    <script src="ui/app_workingHours.js"></script>
+
+
     <script type="text/javascript">
       /*Increament*/
       function incTime() {

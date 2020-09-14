@@ -27,7 +27,8 @@
 </head>
 
 <body id="body">
-     
+        <button class="btn btn-outline-primary" onclick="document.location='index.html'" style="margin-left:2em; margin-top:1em; height:40px" >BACK</button>
+ 
     <section id="services">
       <div class="container">
         <div class="section-header">
@@ -35,40 +36,51 @@
           <p></p>
         </div>
 
-        <form id="tagForm">
+        <div id="list">
+          <div class="row" style="margin-left:22em;">
+            <div class="col-sm-12">
+              <ul id="lectureList"></ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <form id="lectureForm" style="margin-left:-18em; margin-top:-30em;">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
                   <h5 class="title"><a>Name</a></h5>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
-                    <input type="text" id="group" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Lecture's Name">
+                    <input type="text" id="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Lecture's Name" required>
                   </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
                     <h5 class="title"><a>Employee ID</a></h5>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
-                    <input type="text" id="group" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Employee ID">
+                    <input type="text" id="employeeID" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Employee ID" required>
                 </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Faculty</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="faculty">
                         <option>Faculty Of Computing</option>
                         <option>Faculty Of Engineering</option>
                         <option>Faculty Of Business</option>
@@ -78,14 +90,14 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Department</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="department">
                         <option>Information Technology</option>
                         <option>Computer Scienece and Software Engineering</option>
                         <option>Civil Engineering</option>
@@ -95,14 +107,14 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Center</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="center">
                         <option>Malambe Center</option>
                         <option>Metro Campus</option>
                         <option>Kandy Center</option>
@@ -114,14 +126,14 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Building</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="building">
                         <option>Computing Building</option>
                         <option>New Building</option>
                         <option>Engineering Building</option>
@@ -132,14 +144,14 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Category</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
-                    <select class="form-control form-control-lg" id="batch">
+                    <select class="form-control form-control-lg" id="category">
                         <option>Professor</option>
                         <option>Assistant Professor</option>
                         <option>Senior Lecture (HG)</option>
@@ -153,12 +165,12 @@
           </div>
           
           <div class="add_lecture_submit_btn">
-            <button type="submit" class="btn btn-primary">Add Lecture</button>
+            <button type="submit" class="btn btn-primary" style="width:160px;">Save</button>
           </div>
         </form>
       </div>
     </section>
-  <script src="ui/app.js"></script>
+  <script src="ui/app_lecture.js"></script>
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>

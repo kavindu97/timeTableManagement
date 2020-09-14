@@ -91,7 +91,7 @@ ipcRenderer.on("new-time30-created", (e, arg) => {
   const time30Saved = JSON.parse(arg);
   time30s.push(time30Saved);
   renderTime30s(time30s);
-  alert("Student Created Successfully");
+  alert("30 minTime Slot Created Successfully");
   acedemicYear.focus();
 });
 

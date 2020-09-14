@@ -27,7 +27,8 @@
 </head>
 
 <body id="body">
-     
+    <button class="btn btn-outline-primary" onclick="document.location='index.html'" style="margin-left:2em; margin-top:1em; height:40px" >BACK</button>
+
     <section id="services">
       <div class="container">
         <div class="section-header">
@@ -35,38 +36,48 @@
           <p></p>
         </div>
 
-        <form id="subjectForm">
+
+
+        <div id="list" style="margin-left:22em;">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
+              <ul id="subjectList"></ul>
+            </div>
+          </div>
+        </div>
+
+        <form id="subjectForm" style="margin-left:-13em; margin-top:-25em;">
+          <div class="row">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
                   <h5 class="title"><a>Offered Year</a></h5>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-2">
                 <div class="add_tag_box wow fadeInLeft">
                     <input type="text" id="offeredYear" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Offered Year">
                 </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="add_tag_box wow fadeInLeft">
                   <h5 class="title"><a>Offered Semester</a></h5>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-2">
                 <div class="add_tag_box wow fadeInLeft">
                     <input type="text" id="offeredSemester" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Add Offered Semester">
                 </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-3">
               <div class="add_tag_box wow fadeInLeft">
                 <h5 class="title"><a>Subject Code</a></h5>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-2">
               <div class="add_tag_box wow fadeInLeft">
                 <input type="text" id="subjectCode" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Minutes">
               </div>
@@ -84,13 +95,15 @@
                 <input type="number" id="lectureHour" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="1">
               </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-1">
                 <div class="add_tag_box wow fadeInLeft">
                   <input type="number" id="lectureMinute" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="00">
                 </div>
-              </div>
+              </div>         
+			</div>		
+			<div class="row">
               <div class="col-sm-3">
-                <div class="add_tag_time_box wow fadeInLeft">
+                <div class="add_tag_time_box wow fadeInLeft"><br/>
                   <h6 class="title"><a>Tutorial Hours</a></h6>
                 </div>
               </div>
@@ -99,7 +112,7 @@
                   <input type="number" id="tutorialHour" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="1">
                 </div>
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-1">
                   <div class="add_tag_box wow fadeInLeft">
                     <input type="number" id="tutorialMinute" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="00">
                   </div>
@@ -117,11 +130,13 @@
                 <input type="number" id="labHour" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="1">
               </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-1">
                 <div class="add_tag_box wow fadeInLeft">
                   <input type="number" id="labMinute" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="00">
                 </div>
               </div>
+			  </div>
+			  <div class="row">
               <div class="col-sm-3">
                 <div class="add_tag_time_box wow fadeInLeft">
                   <h6 class="title"><a>Evaluation Hours</a></h6>
@@ -132,15 +147,15 @@
                   <input type="number" id="evaluationHour" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="1">
                 </div>
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-1">
                   <div class="add_tag_box wow fadeInLeft">
                     <input type="number" id="evaluationMinute" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="00">
                   </div>
                 </div>
           </div>
 
-          <div class="add_tag_submit_btn">
-            <button type="submit" class="btn btn-primary">Add Tag</button>
+          <div class="add_tag_submit_btn" style="margin-left:-10em; width:20px;">
+            <button type="submit" class="btn btn-primary">Save</button>
           </div>
         </form>
       </div>

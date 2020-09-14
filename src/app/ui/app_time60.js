@@ -91,7 +91,7 @@ ipcRenderer.on("new-time60-created", (e, arg) => {
   const time60Saved = JSON.parse(arg);
   time60s.push(time60Saved);
   renderTime60s(time60s);
-  alert("Student Created Successfully");
+  alert("60 min Time Slot Created Successfully");
 });
 
 

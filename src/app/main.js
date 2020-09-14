@@ -5,11 +5,19 @@ const Time30 = require("./models/timeManagement/Time30");
 const Time60 = require("./models/timeManagement/Time60");
 const Working = require("./models/timeManagement/Working");
 const Student = require("./models/students&tags/Student");
+const Subject = require("./models/lecture&modules/Subject");
+const Lecture = require("./models/lecture&modules/Lecture");
+const WorkingHours = require("./models/timeManagement/WorkingHours");
+const Building = require("./models/buildings&Rooms/Building");
+const Room = require("./models/buildings&Rooms/Room");
+
 
 function createWindow() {
   const win = new BrowserWindow({
     webPreferences: {
       nodeIntegration: true,
+      width: 448,
+      height: 650,
     },
   });
 
@@ -192,4 +200,221 @@ ipcMain.on("update-working", async (e, args) => {
   e.reply("update-working-success", JSON.stringify(updatedWorking));
 });
 
+
+
+
+ipcMain.on("new-subject", async (e, arg) => {
+  console.log("newsubject");
+  const newSubject = new Subject(arg);
+  const subjectSaved = await newSubject.save();
+  console.log(subjectSaved);
+  e.reply("new-subject-created", JSON.stringify(subjectSaved));
+});
+
+ipcMain.on("get-subjects", async (e, arg) => {
+  const subjects = await Subject.find();
+  e.reply("get-subjects", JSON.stringify(subjects));
+});
+
+ipcMain.on("delete-subject", async (e, args) => {
+  const subjectDeleted = await Subject.findByIdAndDelete(args);
+  e.reply("delete-subject-success", JSON.stringify(subjectDeleted));
+});
+
+ipcMain.on("update-subject", async (e, args) => {
+  console.log(args);
+  const updatedSubject = await Subject.findByIdAndUpdate(
+    args.idSubjectToUpdate,
+    {
+      offeredYear: args.offeredYear,
+      offeredSemester: args.offeredSemester,
+      tuesday: args.tuesday,
+      wednesday: args.wednesday,
+      thursday: args.thursday,
+      friday: args.friday,
+      saturday: args.saturday,
+      sunday: args.sunday,
+      hours: args.hours,
+      minutes: args.minutes,
+    },
+    { new: true }
+  );
+  e.reply("update-subject-success", JSON.stringify(updatedSubject));
+});
+
+
+
+ipcMain.on("new-lecture", async (e, arg) => {
+  console.log("newlecture");
+  const newLecture = new Lecture(arg);
+  const lectureSaved = await newLecture.save();
+  console.log(lectureSaved);
+  e.reply("new-lecture-created", JSON.stringify(lectureSaved));
+});
+
+ipcMain.on("get-lectures", async (e, arg) => {
+  const lectures = await Lecture.find();
+  e.reply("get-lectures", JSON.stringify(lectures));
+});
+
+ipcMain.on("delete-lecture", async (e, args) => {
+  const lectureDeleted = await Lecture.findByIdAndDelete(args);
+  e.reply("delete-lecture-success", JSON.stringify(lectureDeleted));
+});
+
+ipcMain.on("update-lecture", async (e, args) => {
+  console.log(args);
+  const updatedLecture = await Lecture.findByIdAndUpdate(
+    args.idLectureToUpdate,
+    {
+      name: args.name,
+      employeeID: args.employeeID,
+      faculty: args.faculty,
+      department: args.department,
+      center: args.center,
+      building: args.building,
+      category: args.saturday,
+    },
+    { new: true }
+  );
+  e.reply("update-lecture-success", JSON.stringify(updatedLecture));
+});
+
+
+//Working hours
+
+
+ipcMain.on("new-workingHours", async (e, arg) => {
+  console.log("jhgjhgjhgjhghjg");
+  const newWorkingHours = new WorkingHours(arg);
+  const workingHoursSaved = await newWorkingHours.save();
+  console.log(workingHoursSaved);
+  e.reply("new-workingHours-created", JSON.stringify(workingHoursSaved));
+});
+
+ipcMain.on("get-workingHourss", async (e, arg) => {
+  const workingHourss = await WorkingHours.find();
+  e.reply("get-workingHourss", JSON.stringify(workingHourss));
+});
+
+ipcMain.on("delete-workingHours", async (e, args) => {
+  const workingHoursDeleted = await WorkingHours.findByIdAndDelete(args);
+  e.reply("delete-workingHours-success", JSON.stringify(workingHoursDeleted));
+});
+
+ipcMain.on("update-workingHours", async (e, args) => {
+  console.log(args);
+  const updatedWorkingHours = await WorkingHours.findByIdAndUpdate(
+    args.idWorkingHoursToUpdate,
+    {
+      hours: args.hours,
+      minutes: args.minutes
+    },
+    { new: true }
+  );
+  e.reply("update-workingHours-success", JSON.stringify(updatedWorkingHours));
+});
+
+//working days
+
+ipcMain.on("new-working", async (e, arg) => {
+  console.log("1");
+  const newWorking = new Working(arg);
+  const workingSaved = await newWorking.save();
+  console.log(workingSaved);
+  e.reply("new-working-created", JSON.stringify(workingSaved));
+});
+
+
+ipcMain.on("get-workings", async (e, arg) => {
+  const workings = await Working.find();
+  e.reply("get-workings", JSON.stringify(workings));
+});
+
+ipcMain.on("delete-working", async (e, args) => {
+  const workingDeleted = await Working.findByIdAndDelete(args);
+  e.reply("delete-working-success", JSON.stringify(workingDeleted));
+});
+
+ipcMain.on("update-working", async (e, args) => {
+  console.log(args);
+  const updatedWorking = await Working.findByIdAndUpdate(
+    args.idWorkingToUpdate,
+    {
+      numberOfWorking: args.numberOfWorking,
+      monday: args.monday,
+      tuesday: args.tuesday,
+      wednesday: args.wednesday,
+      thursday: args.thursday,
+      friday: args.friday,
+      saturday: args.saturday,
+      sunday: args.sunday,
+      hours: args.hours,
+      minutes: args.minutes,
+    },
+    { new: true }
+  );
+  e.reply("update-working-success", JSON.stringify(updatedWorking));
+});
+
+//new Building
+
+
+ipcMain.on("new-building", async (e, arg) => {
+  console.log("new-building")
+  const newBuilding = new Building(arg);
+  const buildingSaved = await newBuilding.save();
+  console.log(buildingSaved);
+  e.reply("new-building-created", JSON.stringify(buildingSaved));
+});
+
+ipcMain.on("get-buildings", async (e, arg) => {
+  const buildings = await Building.find();
+  e.reply("get-buildings", JSON.stringify(buildings));
+});
+
+ipcMain.on("delete-building", async (e, args) => {
+  const buildingDeleted = await Building.findByIdAndDelete(args);
+  e.reply("delete-building-success", JSON.stringify(buildingDeleted));
+});
+
+ipcMain.on("update-building", async (e, args) => {
+  console.log(args);
+  const updatedBuilding = await Building.findByIdAndUpdate(
+    args.idSBuildingToUpdate,
+    { buildingName: args.buildingName, buildingBlock: args.buildingBlock, buildingDes: args.buildingDes},
+    { new: true }
+  );
+  e.reply("update-building-success", JSON.stringify(updatedBuilding));
+});
+
+//new Room
+
+ipcMain.on("new-building-room", async (e, arg) => {
+  console.log("new-building-room");
+  const newBuildingRoom = new Room(arg);
+  const buildingRoomSaved = await newBuildingRoom.save();
+  console.log(buildingRoomSaved);
+  e.reply("new-building-room-created", JSON.stringify(buildingRoomSaved));
+});
+
+ipcMain.on("get-buildings-rooms", async (e, arg) => {
+  const buildingsRooms = await Room.find();
+  e.reply("get-buildings-rooms", JSON.stringify(buildingsRooms));
+});
+
+ipcMain.on("delete-building-room", async (e, args) => {
+  const buildingRoomDeleted = await Room.findByIdAndDelete(args);
+  e.reply("delete-building-room-success", JSON.stringify(buildingRoomDeleted));
+});
+
+ipcMain.on("update-building-room", async (e, args) => {
+  console.log(args);
+  const updatedBuildingRoom = await Room.findByIdAndUpdate(
+    args.idSBuildingRoomToUpdate,
+    { roomName: args.roomName, roomCapacity: args.roomCapacity, roomType:args.roomType},
+    { new: true }
+  );
+  e.reply("update-building-room-success", JSON.stringify(updatedBuildingRoom));
+});
 module.exports = { createWindow };

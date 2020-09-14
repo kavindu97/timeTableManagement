@@ -14,14 +14,7 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Monday',     11],
-          ['Tuesday',      2],
-          ['Wednesday',  2],
-          ['Thursday', 2],
-          ['Friday',    7],
-          ['Saturday',    7],
-          ['Sunday',    7]
+        [{"x":1,"y":"D"},{"x":1,"y":"A"},{"x":1,"y":"Q"}]
         ]);
 
         var options = {
@@ -60,6 +53,9 @@
         <li class="breadcrumb-item"><a href="./../buildingLocation/generateGraph.html">Home</a></li>
         <li class="breadcrumb-item active">Statistics</li>
       </ol>
+
+      
+
      <h4 style="text-align: center;">View Statistics Graphs</h4>
      <button class="btn btn-secondary" onclick="document.location='./../index.html'">BACK TO STATISTIC FORM</button>
     <div id="piechart" style="width: 900px; height: 500px;"></div>

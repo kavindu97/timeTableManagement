@@ -38,34 +38,38 @@ function editSubject(id) {
   idSubjectToUpdate = id;
 
   const subject = subjects.find((subject) => subject._id === id);
-    offeredYear.value = subject.offeredYear,
-    offeredSemester.value = subject.offeredSemester,
-    subjectCode.value = subject.subjectCode,
-    lectureHour.value = subject.subGroupCount,
-    lectureMinute.value = subject.lectureMinute,
-    tutorialHour.value = subject.tutorialHour,
-    tutorialMinute.value = subject.tutorialMinute,
-    labHour.value = subject.labHour,
-    labMinute.value = subject.labMinute,
-    evaluationHour.value = subject.evaluationHour,
-    evaluationMinute.value = subject.evaluationMinute
+  (offeredYear.value = subject.offeredYear),
+    (offeredSemester.value = subject.offeredSemester),
+    (subjectCode.value = subject.subjectCode),
+    (lectureHour.value = subject.lectureHour),
+    (lectureMinute.value = subject.lectureMinute),
+    (tutorialHour.value = subject.tutorialHour),
+    (tutorialMinute.value = subject.tutorialMinute),
+    (labHour.value = subject.labHour),
+    (labMinute.value = subject.labMinute),
+    (evaluationHour.value = subject.evaluationHour),
+    (evaluationMinute.value = subject.evaluationMinute)
+
+    
 }
 
 function renderSubjects(subjects) {
   subjectList.innerHTML = `<table class="table table-striped">
   <thead>
           <tr>
-          <th style="width:100px; display:inline-block; overflow:hidden">offeredYear</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">offeredSemester</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">subjectCode</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">lectureHour</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">lectureMinute</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">tutorialHour</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">tutorialMinute</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">labHour</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">labMinute</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">evaluationHour</th>
-          <th style="width:200px; display:inline-block; overflow:hidden">evaluationMinute</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">Year</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">Sem</th>
+          <th style="width:70px; display:inline-block; overflow:hidden">SCo</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">L.H.</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">L.M.</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">T.H.</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">T.M.</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">L.H.</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">L.M.</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">E.H.</th>
+          <th style="width:50px; display:inline-block; overflow:hidden">E.M.</th>
+          <th style="width:100px; display:inline-block; overflow:hidden">Action</th>
+
           </tr>
         </thead>
         </table>
@@ -76,31 +80,31 @@ function renderSubjects(subjects) {
           <table class="table table-striped">
                 <tbody>
                   <tr>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.offeredYear}</td>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.offeredSemester}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.subjectCode}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.lectureHour}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.lectureMinute}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.tutorialHour}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.tutorialMinute}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.labHour}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.labMinute}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.evaluationHour}</td>
-                    <td style="width:200px; display:inline-block; overflow:hidden">${t.evaluationMinute}</td>
-                    <td style="width:198px; display:inline-block; overflow:hidden">
-                    <button class="btn btn-success" onclick="editStudent('${t._id}')">
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.offeredYear}</td>
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.offeredSemester}</td>
+                    <td style="width:70px; display:inline-block; overflow:hidden">${t.subjectCode}</td>
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.lectureHour}</td>
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.lectureMinute}</td>
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.tutorialHour}</td>
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.tutorialMinute}</td>
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.labHour}</td>
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.labMinute}</td>
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.evaluationHour}</td>
+                    <td style="width:50px; display:inline-block; overflow:hidden">${t.evaluationMinute}</td>
+                    <td style="width:100px; display:inline-block; overflow:hidden">
+                    <button class="btn btn-outline-success" onclick="editSubject('${t._id}')">
                    Edit
                 </button>
-                    <button class="btn btn-danger" onclick="deleteStudent('${t._id}')">
+                    <button class="btn btn-outline-danger" onclick="deleteSubject('${t._id}')">
                     Delete
                   </button>
                 </td>
                   </tr>   
           </table>
+          
         `;
   });
 }
-
 let subjects = [];
 ipcRenderer.send("get-subjects");
 
@@ -119,10 +123,14 @@ subjectForm.addEventListener("submit", async (e) => {
     labHour: labHour.value,
     labMinute: labMinute.value,
     evaluationHour: evaluationHour.value,
-    evaluationMinute: evaluationMinute.value,
+    evaluationMinute: evaluationMinute.value
   };
 
   if (!updateStatus) {
+    console.log(subject);
+
+
+
     ipcRenderer.send("new-subject", subject);
   } else {
     ipcRenderer.send("update-subject", { ...subject, idSubjectToUpdate });
@@ -136,7 +144,7 @@ ipcRenderer.on("new-subject-created", (e, arg) => {
   const subjectSaved = JSON.parse(arg);
   subjects.push(subjectSaved);
   renderSubjects(subjects);
-  alert("Student Created Successfully");
+  alert("Subject Created Successfully");
   acedemicYear.focus();
 });
 
@@ -160,17 +168,17 @@ ipcRenderer.on("update-subject-success", (e, args) => {
   const updatedSubject = JSON.parse(args);
   subjects = subjects.map((t, i) => {
     if (t._id === updatedSubject._id) {
-      (t.offeredYear = updatedStudent.offeredYear),
-        (t.offeredSemester = updatedStudent.offeredSemester),
-        (t.subjectCode = updatedStudent.subjectCode),
-        (t.lectureHour = updatedStudent.lectureHour),
-        (t.lectureMinute = updatedStudent.lectureMinute),
-        (t.tutorialHour = updatedStudent.tutorialHour),
-        (t.tutorialMinute = updatedStudent.tutorialMinute),
-        (t.labHour = updatedStudent.labHour),
-        (t.labMinute = updatedStudent.labMinute),
-        (t.evaluationHour = updatedStudent.evaluationHour),
-        (t.evaluationMinute = updatedStudent.evaluationMinute);
+      (t.offeredYear = updatedSubject.offeredYear),
+        (t.offeredSemester = updatedSubject.offeredSemester),
+        (t.subjectCode = updatedSubject.subjectCode),
+        (t.lectureHour = updatedSubject.lectureHour),
+        (t.lectureMinute = updatedSubject.lectureMinute),
+        (t.tutorialHour = updatedSubject.tutorialHour),
+        (t.tutorialMinute = updatedSubject.tutorialMinute),
+        (t.labHour = updatedSubject.labHour),
+        (t.labMinute = updatedSubject.labMinute),
+        (t.evaluationHour = updatedSubject.evaluationHour),
+        (t.evaluationMinute = updatedSubject.evaluationMinute)
     }
     return t;
   });

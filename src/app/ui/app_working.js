@@ -33,24 +33,24 @@ function editWorking(id) {
   idWorkingToUpdate = id;
 
   const working = workings.find((working) => working._id === id);
-    numberOfWorking.value = working.numberOfWorking,
-    monday.value = working.monday,
-    tuesday.value = working.tuesday,
-    wednesday.value = working.wednesday,
-    thursday.value = working.thursday,
-    friday.value = working.friday
+  (numberOfWorking.value = working.numberOfWorking),
+    (monday.value = working.monday),
+    (tuesday.value = working.tuesday),
+    (wednesday.value = working.wednesday),
+    (thursday.value = working.thursday),
+    (friday.value = working.friday);
 }
 
 function renderWorkings(workings) {
-    workingList.innerHTML = `<table class="table table-striped">
+  workingList.innerHTML = `<table class="table table-striped">
   <thead>
           <tr>
-          <th style="width:100px; display:inline-block; overflow:hidden">Number Days</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">Monday</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">tuesday</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">wednesday</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">thursday</th>
-          <th style="width:100px; display:inline-block; overflow:hidden">friday</th>
+          <th style="width:70px; display:inline-block; overflow:hidden">Number Days</th>
+          <th style="width:70px; display:inline-block; overflow:hidden">Monday</th>
+          <th style="width:70px; display:inline-block; overflow:hidden">tuesday</th>
+          <th style="width:70px; display:inline-block; overflow:hidden">wednesday</th>
+          <th style="width:70px; display:inline-block; overflow:hidden">thursday</th>
+          <th style="width:70px; display:inline-block; overflow:hidden">friday</th>
           </tr>
         </thead>
         </table>
@@ -61,17 +61,17 @@ function renderWorkings(workings) {
           <table class="table table-striped">
                 <tbody>
                   <tr>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.numberOfWorking}</td>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.monday}</td>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.tuesday}</td>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.wednesday}</td>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.thursday}</td>
-                    <td style="width:100px; display:inline-block; overflow:hidden">${t.friday}</td>
+                    <td style="width:70px; display:inline-block; overflow:hidden">${t.numberOfWorking}</td>
+                    <td style="width:70px; display:inline-block; overflow:hidden">${t.monday}</td>
+                    <td style="width:70px; display:inline-block; overflow:hidden">${t.tuesday}</td>
+                    <td style="width:70px; display:inline-block; overflow:hidden">${t.wednesday}</td>
+                    <td style="width:70px; display:inline-block; overflow:hidden">${t.thursday}</td>
+                    <td style="width:70px; display:inline-block; overflow:hidden">${t.friday}</td>
                     <td style="width:198px; display:inline-block; overflow:hidden">
-                    <button class="btn btn-success" onclick="editTime30('${t._id}')">
+                    <button class="btn btn-success" onclick="editWorking('${t._id}')">
                    Edit
                 </button>
-                    <button class="btn btn-danger" onclick="deleteTime30('${t._id}')">
+                    <button class="btn btn-danger" onclick="deleteWorking('${t._id}')">
                     Delete
                   </button>
                 </td>
@@ -126,7 +126,7 @@ ipcRenderer.on("get-workings", (e, args) => {
 ipcRenderer.on("delete-working-success", (e, args) => {
   const deletedWorking = JSON.parse(args);
   const newWorkings = workings.filter((t) => {
-    return t._id !== deletedWorkings._id;
+    return t._id !== deletedWorking._id;
   });
   workings = newWorkings;
   renderWorkings(workings);

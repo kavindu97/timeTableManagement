@@ -9,44 +9,76 @@
   <link rel="stylesheet" href="./../css/buildingLocation.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-  <script>
-    function myFunction() {
-      var input, filter, table, tr, td, i, txtValue;
-      input = document.getElementById("bName");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }       
-      }
-    }
-    </script>
+  <!-- validations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
 <style>
-    .pagination a {
-      color: black;
-      float: left;
-      padding: 8px 16px;
-      text-decoration: none;
-      transition: background-color .3s;
-    }
-    
-    .pagination a.active {
-      background-color: dodgerblue;
-      color: white;
-    }
-    
-    .pagination a:hover:not(.active) {background-color: #ddd;}
-    </style>
-    
+
+    /* validations */
+/* 
+    body {
+  margin: 20px 0;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 1.25rem;
+  width: 300px;
+}
+
+form, p {
+  margin: 20px;
+}
+
+p.note {
+  font-size: 1rem;
+  color: red;
+}
+
+input, textarea {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 4px;
+  font-family: 'Lato';
+  width: 300px;
+  margin-top: 10px;
+}
+
+label {
+  width: 300px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+label span {
+  font-size: 1rem;
+}
+
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+input.error, textarea.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+}
+
+[type="submit"], [type="reset"], button, html [type="button"] {
+    margin-left: 0;
+    border-radius: 0;
+    background: black;
+    color: white;
+    border: none;
+    font-weight: 300;
+    padding: 10px 0;
+    line-height: 1;
+} */
+  
+</style>
 </head>
 <body>
 <br/>
@@ -55,8 +87,9 @@
     <li class="breadcrumb-item active">Location</li>
   </ol>
  <h4 style="text-align: center;">Building Location Info</h4>
- <button class="btn btn-success" onclick="document.location='./../index.html'" style="margin-left:0.5em;">BACK TO HOME</button>
- <button class="btn btn-warning" style="margin-left:83em;" onclick="document.location='addRoom.html'">ADD ROOMS</button>
+ <button class="btn btn-btn btn-outline-primary" style="margin-left:1.7em" onclick="document.location='./../../index.html'" style="margin-left:0.5em;">BACK TO HOME</button>
+ <button class="btn btn-btn btn-outline-warning" onClick="window.location.reload();">Refresh Page</button>
+ <!-- <button class="btn btn-warning" style="margin-left:83em;" onclick="document.location='addRoom.html'">ADD ROOMS</button> -->
   <main class="container-fluid">
     <div class="row">
       <div class="col-md-6 p-4 my-auto">
@@ -65,42 +98,29 @@
         <div class="card-header">Building</div>
          <hr class="cell-divide-hr">
           <div class="form-group">
-            <input type="text" id="bName" placeholder="Building Name" class="form-control" autofocus required>
+            <input type="text" id="buildingName" placeholder="Building Name" class="form-control" autofocus required>
           </div>
           <div class="form-group">
-            <input type="text" id="bBlock" placeholder="Block" step="any" class="form-control" required>
+            <input type="text" id="buildingBlock" placeholder="Block" step="any" class="form-control" required>
           </div>
           <div class="form-group">
-            <textarea id="bDes" rows="3" placeholder="Building Description" class="form-control" required></textarea>
+            <textarea id="buildingDes" rows="3" placeholder="Building Description" class="form-control" ></textarea>
           </div>
           <button type="submit" class="btn btn-primary">
             Save
           </button>
         </form>
-        
       </div>
       
          <!-- Product List -->
       <div class="col-md-6">
         <br/>
-        
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-          </form>
-       <div id="buildings"></div>
-
-       <div class="pagination">
-        <a href="#">&laquo;</a>
-        <a class="active" href="#">1</a>
-        <a href="#">&raquo;</a>
-      </div>
-      
-
+        <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"> -->
+       <div id="buildingList"></div>
+       <script src="./../app_buildingRooms.js"></script>
       </div>
     </div>
   </main>
-
-  <script src="./../app.js"></script>
+  <script src="./../../main.js"></script>
 </body>
 </html>

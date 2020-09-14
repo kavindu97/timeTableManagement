@@ -34,101 +34,24 @@
   <body data-spy="scroll" data-target=".fixed-top"><br/>
   <a class="btn-solid-reg page-scroll" href="View.html"> Back </a>
 
-    <!-- <form id="workingForm">
-      <div class="form-group">
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Number Of Days</label>
-          <select class="form-control" id="numberOfWorking">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-          </select>
+    
+
+      <div id="list">
+        <div class="row">
+          <div class="col-sm-12" style="margin-left:55em;">
+            <ul id="workingList"></ul>
+          </div>
         </div>
       </div>
 
-      <div class="form-check">
-        <input
-          type="checkbox"
-          class="form-check-input"
-          id="monday"
-          value="true"
-        />
-        <label class="form-check-label" for="exampleCheck1">Monday</label>
-        <input
-          type="checkbox"
-          class="form-check-input"
-          id="tuesday"
-          value="true"
-        />
-        <label class="form-check-label" for="exampleCheck1">Tuesday</label>
-        <input
-          type="checkbox"
-          class="form-check-input"
-          id="wednesday"
-          value="true"
-        />
-        <label class="form-check-label" for="exampleCheck1">Wednesday</label>
-        <input
-          type="checkbox"
-          class="form-check-input"
-          id="thursday"
-          value="true"
-        />
-        <label class="form-check-label" for="exampleCheck1">Thursday</label>
-        <input
-          type="checkbox"
-          class="form-check-input"
-          id="friday"
-          value="true"
-        />
-        <label class="form-check-label" for="exampleCheck1">Friday</label>
-        <input
-          type="checkbox"
-          class="form-check-input"
-          id="saturday"
-          value="true"
-        />
-        <label class="form-check-label" for="exampleCheck1">Saturday</label>
-        <input
-          type="checkbox"
-          class="form-check-input"
-          id="sunday"
-          value="true"
-        />
-        <label class="form-check-label" for="exampleCheck1">Sunday</label>
-      </div>
 
-      <div class="form-group">
-        <label for="exampleInputPassword1">Hours</label>
-        <input
-          type="number"
-          class="form-control"
-          id="hours"
-          placeholder="Hours"
-          id="hours"
-        />
-      </div>
 
-      <div class="form-group">
-        <label for="exampleInputPassword1">Minutes</label>
-        <input
-          type="number"
-          class="form-control"
-          id="minutes"
-          placeholder="Minutes"
-          id="minutes"
-        />
-      </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button> -->
+
     <form id="workingForm"> 
-    <div id="pricing" class="cards-2">
+    <div id="pricing" class="cards-2" style="margin-left:-15em; margin-top:-8em;">
       <div class="container">
-        <div class="row">
+        <div class="row">             
           <div class="row">
             <div class="col-lg-16"> 
               <div class="card">
@@ -136,27 +59,13 @@
                   <div class="card-title">Number of working days</div><br/>
                     <hr class="cell-divide-hr">
                       <div class="price">
-								<div>
-								<input type="radio" id="numberOfWorking" name="drone" value="dewey">
-								<label for="dewey">1 day</label>
-								</div><br/>
-								<div>
-								<input type="radio" id="numberOfWorking" name="drone" value="dewey">
-								<label for="dewey">2 days</label>
-								</div><br/>
-								<div>
-								<input type="radio" id="numberOfWorking" name="drone" value="dewey">
-								<label for="dewey">3 days</label>
-								</div><br/>
-								<div>
-								<input type="radio" id="numberOfWorking" name="drone" value="dewey">
-								<label for="dewey">4 days</label>
-								</div><br/>
-								<div>
-								<input type="radio" id="numberOfWorking" name="drone" value="dewey">
-								<label for="dewey">5 days</label>
-								</div><br/>
-								</div>	
+                        <select class="form-control form-control-lg" id="numberOfWorking">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </div></select></div>
                 <hr class="cell-divide-hr"><br/>
                   <div class="button-wrapper">
                   </div>
@@ -165,44 +74,42 @@
 
                 <div class="card">
                   <div class="card-body">
-                    <div class="card-title">Working Days (select all)</div><br/>
+                    <div class="card-title"><h3>Working Days (select all)</h3></div><br/>
                       <hr class="cell-divide-hr">
                         <div class="price">
-								<div>Monday
-                  <input type="radio" id="monday" name="drone" value="monday">
-                  <label for="monday">Yes</label>
+                <div><h4>Monday</h4>
+                  <select class="form-control form-control-lg" id="monday">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </div></select>
+                  </div>
+                <div><h4>Tuesday</h4>
                   
-                  <input type="radio" id="monday" name="drone" value="monday">
-                  <label for="monday">No</label>
-                </div><br/>
-                <div>Tuesday
-                  <input type="radio" id="tuesday" name="drone" value="tuesday">
-                  <label for="tuesday">Yes</label>
+                  <select class="form-control form-control-lg" id="tuesday">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </div></select>
                   
-                  <input type="radio" id="tuesday" name="drone" value="tuesday">
-                  <label for="tuesday">No</label>
-                </div><br/>
-                <div>Wednesday
-                  <input type="radio" id="wednesday" name="drone" value="wednesday">
-                  <label for="wednesday">Yes</label>
                   
-                  <input type="radio" id="wednesday" name="drone" value="wednesday">
-                  <label for="wednesday">No</label>
-                </div><br/>
-                <div>Thursday
-                  <input type="radio" id="thursday" name="drone" value="thursday">
-                  <label for="thursday">Yes</label>
-                  
-                  <input type="radio" id="thursday" name="drone" value="thursday">
-                  <label for="thursday">No</label>
-                </div><br/>
-                <div>Friday
-                  <input type="radio" id="friday" name="friday" value="friday">
-                  <label for="friday">Yes</label>
-                  
-                  <input type="radio" id="friday" name="friday" value="friday">
-                  <label for="friday">No</label>
-								</div><br/>
+                </div>
+                <div><h4>Wednesday</h4>
+                  <select class="form-control form-control-lg" id="wednesday">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </div></select>
+                </div>
+                <div><h4>Thursday</h4>
+                  <select class="form-control form-control-lg" id="thursday">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </div></select>
+                </div>
+                <div><h4>Friday</h4>
+                  <select class="form-control form-control-lg" id="friday">
+                    <option>Yes</option>
+                    <option>No</option>
+                  </div></select>
+								</div>
 								
 							<hr class="cell-divide-hr">
                 </div>
