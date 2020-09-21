@@ -32,23 +32,21 @@
 	  			<button class="btn btn-outline-primary"" onclick="document.location='index.html'" style="margin-left:-12em; height:40px" >BACK</button>
 
         <div class="section-header">
-          <a href="index.html"><h2>Students Details</h2></a>
+          <a href="index.html"><h2>Consecutive Sessions</h2></a>
           <p></p>
         </div><br/>
         <form id="studentForm" onsubmit="return validateForm()" method="post">
+          
           <div class="row" style="margin-left:-10.5em;">
+            
             <div class="col-lg-3">
+              <br>
+            
               <div class="add_student_box wow fadeInLeft">
-                <h4 class="title"><a href="">Acedemic Year</a></h4>
+                <h4 class="title"><a href="">Add First Session</a></h4>
               </div>
               <div class="add_student_box wow fadeInLeft" data-wow-delay="0.2s">
-                <h4 class="title"><a href="">Programme</a></h4>
-              </div>
-              <div class="add_student_box wow fadeInLeft">
-                <h4 class="title"><a href="">Group Count</a></h4>
-              </div>
-              <div class="add_student_box wow fadeInLeft" data-wow-delay="0.2s">
-                <h4 class="title"><a href="">Sub Group Count</a></h4>
+                <h4 class="title"><a href="">Add Second Session</a></h4>
               </div>
             </div>
     
@@ -56,61 +54,109 @@
                 <div class="student_filed">
                   <div class="add_tag_box wow fadeInLeft">
                     <select class="form-control form-control-lg" id="acedemicYear">
-                        <option>Acedemic Year Select</option>
-                        <option>Y1S1</option>
-                        <option>Y1S2</option>
-                        <option>Y2S1</option>
-                        <option>Y2S2</option>
-                        <option>Y3S1</option>
-                        <option>Y3S2</option>
-                        <option>Y4S1</option>
-                        <option>Y4S2</option>
+                        <option>Select First Session</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
                     </select>
                   </div>
                 </div>
                 <div class="student_filed">
                   <div class="add_tag_box wow fadeInLeft">
                     <select class="form-control form-control-lg" id="programme">
-                        <option>Programme select</option>
-                        <option>Information Technology</option>
-                        <option >Computer Science & Networking Engineering</option>
-                        <option>Information System Engineering</option>
-                        <option>Cyber Security</option>
-                        <option>Software Engineering</option>
-                        <option>Data Science</option>
-                        <option>Interactive Media</option>
+                        <option>Select Second Session</option>
+                        <option>5</option>
+                        <option >6</option>
+                        <option>7</option>
+                        <option>8</option>
                     </select>
                   </div>
                 </div>
-                <div class="student_filed">
-                  <div class="add_tag_box wow fadeInLeft">
-                    <input type="text" class="form-control" id="groupCount" aria-describedby="emailHelp" placeholder="Insert Group Count" id="groupCount" required>
-                  </div>
-                </div>
-                <div class="student_filed">
-                  <div class="add_tag_box wow fadeInLeft">
-                    <input type="text" class="form-control" id="subGroupCount" aria-describedby="emailHelp" placeholder="Insert Sub Group Count" id="subGroupCount" required>
-                  </div>
-                </div> 
+                
 					<br/><br/>
 					<div class="student_btn_section">
               <button type="submit" class="btn btn-primary" style="margin-left:-11em; width:290px">Submit</button>
             </div>
                   
             </div>
+			
+      
+            <!-- <div class="col-lg-3">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Group IDs</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Y3S2SE.01</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.02</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.03</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.04</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> -->
+            <!-- <div class="col-lg-3">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Sub Group IDs</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Y3S2SE.01.01</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.01.02</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.02.01</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.02.02</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.03.01</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Y3S2SE.03.02</th>
+                    <td><a href=""><button type="submit" class="btn btn-danger">Delete</button></a></td>
+                  </tr>
+                  
+    
+                </tbody>
+              </table>
+            </div> -->
+    
+            
+    
           </div>
         </form>
       
 
       </div>
     </section>
-
-
-          <div class="studentList" style="margin-left:45.5em; margin-top:-20em;">
-
-            <ul id="studentList"></ul>
-  
-          </div>
   <script>
   function validateForm() {
   var x = document.forms["studentForm"]["acedemicYear"].value;
@@ -157,5 +203,4 @@
   <script src="js/main.js"></script>
 
 </body>
-
 </html>
